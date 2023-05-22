@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "mintTo",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"burn(uint256)": {
+					"details": "Burn `amount` tokens and decreasing the total supply."
+				},
+				"mintTo(uint256,address)": {
+					"details": "Creates `amount` tokens and assigns them to `recipient`, increasing the total supply. Requirements - `msg.sender` must be the token owner - `_mintable` must be true"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"MGAS/ISwap.sol": "ISwap"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"MGAS/ISwap.sol": {
+			"keccak256": "0x6db62b458b233970b0e5aa5f00191595628084e794d1e8ac43292b4f088876ce",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://82293cdd6c6d5a2e61f6b1b0849aa90e3c4f7f00cce909d679e0dadf18d05069",
+				"dweb:/ipfs/QmfPSHUrbxJd2SsFCMwnBmmpfefi3niuvqr8x6NqdCxXkP"
+			]
+		}
+	},
+	"version": 1
+}

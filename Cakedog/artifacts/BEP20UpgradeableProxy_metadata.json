@@ -1,0 +1,233 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "logic",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "admin",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "previousAdmin",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "AdminChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "implementation",
+						"type": "address"
+					}
+				],
+				"name": "Upgraded",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "admin_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "changeAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "implementation_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newImplementation",
+						"type": "address"
+					}
+				],
+				"name": "upgradeTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newImplementation",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "upgradeToAndCall",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"AdminChanged(address,address)": {
+					"details": "Emitted when the admin account has changed."
+				},
+				"Upgraded(address)": {
+					"details": "Emitted when the implementation is upgraded."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"admin()": {
+					"details": "Returns the current admin.  NOTE: Only the admin can call this function. See {ProxyAdmin-getProxyAdmin}.  TIP: To get this value clients can read directly from the storage slot shown below (specified by EIP1967) using the https://eth.wiki/json-rpc/API#eth_getstorageat[`eth_getStorageAt`] RPC call. `0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103`"
+				},
+				"changeAdmin(address)": {
+					"details": "Changes the admin of the proxy.  Emits an {AdminChanged} event.  NOTE: Only the admin can call this function. See {ProxyAdmin-changeProxyAdmin}."
+				},
+				"implementation()": {
+					"details": "Returns the current implementation.  NOTE: Only the admin can call this function. See {ProxyAdmin-getProxyImplementation}.  TIP: To get this value clients can read directly from the storage slot shown below (specified by EIP1967) using the https://eth.wiki/json-rpc/API#eth_getstorageat[`eth_getStorageAt`] RPC call. `0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc`"
+				},
+				"upgradeTo(address)": {
+					"details": "Upgrade the implementation of the proxy.  NOTE: Only the admin can call this function. See {ProxyAdmin-upgrade}."
+				},
+				"upgradeToAndCall(address,bytes)": {
+					"details": "Upgrade the implementation of the proxy, and then call a function from the new implementation as specified by `data`, which should be an encoded function call. This is useful to initialize new storage variables in the proxied contract.  NOTE: Only the admin can call this function. See {ProxyAdmin-upgradeAndCall}."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Cakedog/BEP20UpgradeableProxy.sol": "BEP20UpgradeableProxy"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Cakedog/Address.sol": {
+			"keccak256": "0xb99fff92e4d575ec2f6aca7cd1201bd9e8d2fb7b318f47cf3e7113819a93a10a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://797bae44e3e522f323b63824e079f660bed2b1d8e8e20f2c9afa2fedc18c3090",
+				"dweb:/ipfs/QmVueL5yixG3hGirJSJ9SfLxCmxFtARiiyoj3ZgCC49GTf"
+			]
+		},
+		"Cakedog/BEP20UpgradeableProxy.sol": {
+			"keccak256": "0xf84bc3b91d9839e0b2571683423ba6c816b4b44ce48a3e73c8e751504dbec892",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://921b6526e4c45bad86f36d912f3e8387ad3aa093d16de28d02c6e06342e9c179",
+				"dweb:/ipfs/QmNfiF88tRiyrbmyn2wwq2KSTxxha9vQvxy2D75wjKD9Um"
+			]
+		},
+		"Cakedog/Proxy.sol": {
+			"keccak256": "0x3259451f54b5c891cffac847ee32981db95cf5af1798f913ae13272c65a63d22",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://56e76393b23480c4b83de08fdf860cc67efd149401f4c2a0ee4d9e34013e8521",
+				"dweb:/ipfs/QmYQ7dYTxyijboRAv2jxdhMDKWwq4Qe76hPvEhiok8bvwH"
+			]
+		},
+		"Cakedog/TransparentUpgradeableProxy.sol": {
+			"keccak256": "0xc18c83c3a4b024c593fb2491d67d3bfce02d2af9e82a242f720628c656db8220",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2c9bc3caf94554b7abb5e565760fe482f1e36ffe6183439872cbda2fc06a7591",
+				"dweb:/ipfs/QmXphHMdTyHMnJkzLt1xu55z9j479JTaCiYP9WkTJWii7D"
+			]
+		},
+		"Cakedog/UpgradeableProxy.sol": {
+			"keccak256": "0x0b427fd59234b813a2f97b2e96e6009425cf415c63ed6fdd99d5a93de6e93684",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://4520c2f36f5d4de00e0a2ae669e00975af67916004733dcc675bff8fc86b8ee4",
+				"dweb:/ipfs/QmYe6cVMCvQ121TX1EQGAyr3fDW3Ux2aVrgMFHrhqVXpvn"
+			]
+		}
+	},
+	"version": 1
+}
